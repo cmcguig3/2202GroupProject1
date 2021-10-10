@@ -1,0 +1,81 @@
+let zero = " _ \n| |\n|_|\n";
+    let zeroLines = [" _ ","| |","|_|"]
+let one = "-| \n | \n_|_\n";
+    let oneLines = ["   "," | "," | "];
+let two = " _\n _|\n|_\n";
+    let twoLines= [" _ "," _|","|_ "];
+let three = "_\n_|\n_|\n";
+    let threeLines=[" _ "," _|"," _|"];
+let four = "   \n|_|\n  |\n";
+    let fourLines=["   ","|_|","  |"];
+let five = " __\n|_\n__|\n";
+    let fiveLines=[" _ ","|_ "," _|"];
+let six = " _\n|_\n|_|\n";
+    let sixLines=[" _ ","|_ ","|_|"];
+let seven = "__\n |\n |\n";
+    let sevenLines=["__ ","  |","  |"];
+let eight = " _\n|_|\n|_|\n";
+    let eightLines=[" _ ","|_|","|_|"];
+let nine = " _\n|_|\n  |\n";
+    let nineLines=[" _ ","|_|","  |"];
+
+let allDigits = [zeroLines,oneLines,twoLines,threeLines,fourLines,fiveLines,sixLines,sevenLines,eightLines,nineLines];
+
+let printDigits = function(first){
+
+    let printSecond = function(second){
+
+        var x = "";
+        for(let i=0;i<3;i++){
+
+            x += first[i] + " " + second[i];
+            x += "\n";
+        }
+        return x;
+
+    };
+    return printSecond;
+};
+
+let printSingles = printDigits(zeroLines);
+for(let i=0;i<10;i++){
+    console.log(printSingles(allDigits[i]));
+}
+
+let printTeens = printDigits(oneLines);
+for(let i=0;i<10;i++){
+    console.log(printTeens(allDigits[i]));
+}
+let printTwenties = printDigits(twoLines);
+for(let i=0;i<10;i++){
+    console.log(printTwenties(allDigits[i]));
+}
+let printThirties = printDigits(threeLines);
+for(let i=0;i<10;i++){
+    console.log(printThirties(allDigits[i]));
+}
+let printFourties = printDigits(fourLines);
+for(let i=0;i<10;i++){
+    console.log(printFourties(allDigits[i]));
+}
+let printFifties = printDigits(fiveLines);
+for(let i=0;i<10;i++){
+    console.log(printFifties(allDigits[i]));
+}
+let printSixties = printDigits(sixLines);
+for(let i=0;i<10;i++){
+    console.log(printSixties(allDigits[i]));
+}
+let printSeventies = printDigits(sevenLines);
+for(let i=0;i<10;i++){
+    console.log(printSeventies(allDigits[i]));
+}
+let printEighties = printDigits(eightLines);
+for(let i=0;i<10;i++){
+    console.log(printEighties(allDigits[i]));
+}
+let printNinties = printDigits(nineLines);
+for(let i=0;i<10;i++){
+    console.log(printNinties(allDigits[i]));
+}
+
